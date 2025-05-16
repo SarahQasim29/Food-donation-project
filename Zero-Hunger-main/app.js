@@ -7,11 +7,18 @@ const session = require("express-session");
 const expressLayouts = require("express-ejs-layouts");
 const methodOverride = require("method-override");
 const homeRoutes = require("./routes/home.js");
-const authRoutes = require("./routes/auth.js");
-const adminRoutes = require("./routes/admin.js");
-const donorRoutes = require("./routes/donor.js");
-const agentRoutes = require("./routes/agent.js");
-const collectorRoutes = require("./routes/collector.js");
+//const adminRoutes = require("./routes/admin.js");
+//const donorRoutes = require("./routes/donor.js");
+//const agentRoutes = require("./routes/agent.js");
+//const collectorRoutes = require("./routes/collector.js");
+
+// === Importing Service Routes ===
+const adminRoutes = require("./services/adminService");
+const agentRoutes = require("./services/agentService");
+const donorRoutes = require("./services/donorService");
+const collectorRoutes = require("./services/collectorService");
+const authRoutes = require("./services/authService.js");
+
 const LocationRoutes = require("./routes/Location.js"); // Add this line for agent location routes
 const feedbackRoutes = require("./routes/feedbackRoutes"); // Import feedback routes
 const userFeedbackRoutes = require("./routes/userFeedbackRoutes"); // Import user feedback routes
